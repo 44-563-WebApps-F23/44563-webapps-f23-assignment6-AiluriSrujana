@@ -4,9 +4,11 @@ Introduction to Java Script and DOM
 
 Hosted at :
 [Author](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-AiluriSrujana/author.html)
-------
+
+
 [Crusie](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-AiluriSrujana/crusie.html)
-------
+
+
 [Tips](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-AiluriSrujana/tips.html)
---------
+
 
