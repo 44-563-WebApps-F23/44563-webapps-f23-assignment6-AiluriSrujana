@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Crusie Selection</title>
+</head>
+<body>
+    <h1>Srujana goes on a Crusie</h1>
+<form id="crusiecheckboxForm">
+<div class="form-group">
+        <label for="sharesCabin">SharesCabin:</label>
+        <input type="checkbox" id="sharesCabin" value="True">
+</div>
+<div class="form-group">
+    <label for="breakfast">Breakfast:</label>
+    <input type="checkbox" id="breakfast" value="True">
+</div>
+<div class="form-group"></div>
+    <label for="poolPass">PoolPass:</label>
+    <input type="checkbox" id="poolPass" value="False">
+</div>
+<br>
+<input type="button" value="Select a crusie" onclick="selectCrusie()">
+<br>
+<div id="result">Result: </div>
+</form>
+<!---- ADDITION  FORM-->
+<br>
+<form id="textInputForm">
+<div class="form-group">
+    <label for="daysInput">Enter the number of days</label>
+    <input type="text" id="daysInput" >
+</div>
+<br>
+<div class="form-group">
+    <label for="priceInput">Enter Price:</label>
+    <input type="text" id="priceInput" >
+</div>
+<br>
+<input type="button" value="Update the Crusie" onclick="updateCrusie()">
+</form>
+
+<script>
+    var my_cruise = {};
+    function selectCrusie()
+    {
+        my_cruise = {};
+
+        var sharesCabin = document.getElementById("sharesCabin").checked;
+        var breakfast = document.getElementById("breakfast").checked;
+        var poolPass = document.getElementById("poolPass").checked;
+
+
+        my_cruise.shared = sharesCabin;
+        my_cruise.breakfast = breakfast;
+        my_cruise.pool = poolPass;
+
+        var resultElement = document.getElementById("result");
+        resultElement.innerHTML = JSON.stringify(my_cruise);
+    }
+    function updateCrusie()
+    {
+        var days =document.getElementById("daysInput").value;
+        var price = document.getElementById("priceInput").value;
+
+        my_cruise.days=days;
+        my_cruise.price=price;
+
+        var resultElement = document.getElementById("result");
+        resultElement.innerHTML=JSON.stringify(my_cruise);
+    }
+</script>
+</body>
+</html>
